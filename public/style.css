@@ -1,11 +1,32 @@
-idden;
-  .imageHeader {
-  top: 0px;
-  left: 0px;
-  width: 20%;
-  position: fixed;
+
+
+body{
+  width:50%;
+  height:100%;
+  overflow-x:hidden;
 }
-#country {
-  width: 100%;
-  height:.ctap {
+.imageHeader{
+  width:20%;
+  top:0px;
+  left:0px;
+  position:fixed;
+  
 }
+#country{
+  height:100%;
+  width:100%;
+}
+.struct{
+  top:-10px;
+  left:39%;
+  position:relative; 
+}
+.cons{
+  position:absolute;
+  width:100%;
+  height:50%;
+  left:0px;
+  top:7%;
+  background-color:#d3d3d3;
+}
+  
