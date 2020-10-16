@@ -2,6 +2,7 @@ dependencies:
   covidapi: 0.4.3
   express: 4.17.1
   fs: 0.0.2
+  newsapi: 2.4.1
   weather-js: 2.0.0
 packages:
   /@aero/centra/1.0.3:
@@ -119,6 +120,11 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-+Hp8fLp57wnUSt0tY0tHEXh4voZRDnoIrZPqlo3DPiI4y9lwg/jqx+1Om94/W6ZaPDOUbnjOt/99w66zk+l1Xg==
+  /core-js/3.6.5:
+    dev: false
+    requiresBuild: true
+    resolution:
+      integrity: sha512-vZVEEwZoIsI+vPEuoF9Iqf5H7/M3eeQqWlQnYa8FSKKePuYTf5MWnxb5SDAzCa60b3JBRS5g9b+Dq7b1y/RCrA==
   /core-util-is/1.0.2:
     dev: false
     resolution:
@@ -471,6 +477,19 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-hZXc7K2e+PgeI1eDBe/10Ard4ekbfrrqG8Ep+8Jmf4JID2bNg7NvCPOZN+kfF574pFQI7mum2AUqDidoKqcTOw==
+  /newsapi/2.4.1:
+    dependencies:
+      core-js: 3.6.5
+      node-fetch: 2.6.1
+    dev: false
+    resolution:
+      integrity: sha512-yw/aZBgDwNbNMqQ1V7XFKdW2jvL8Fh4qMiU0Awin87Rt6lbPnS8OuiLaL15Ws5X82/EXhzNf/djAlPHOWVgMJg==
+  /node-fetch/2.6.1:
+    dev: false
+    engines:
+      node: 4.x || >=6.0.0
+    resolution:
+      integrity: sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
   /oauth-sign/0.9.0:
     dev: false
     resolution:
@@ -749,4 +768,5 @@ specifiers:
   covidapi: ^0.4.3
   express: ^4.17.1
   fs: ^0.0.2
+  newsapi: ^2.4.1
   weather-js: ^2.0.0
