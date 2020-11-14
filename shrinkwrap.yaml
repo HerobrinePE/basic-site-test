@@ -2,6 +2,7 @@ dependencies:
   covidapi: 0.4.3
   express: 4.17.1
   fs: 0.0.2
+  ip-to-location: 1.0.1
   newsapi: 2.4.1
   weather-js: 2.0.0
 packages:
@@ -78,6 +79,15 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha512-dhEPs72UPbDnAQJ9ZKMNTP6ptJaionhP5cBb541nXPlW60Jepo9RV/a4fX4XWW9CuFNK22krhrj1+rgzifNCsw==
+  /boom/5.2.0:
+    dependencies:
+      hoek: 4.2.1
+    deprecated: 'This version has been deprecated in accordance with the hapi support policy (hapi.im/support). Please upgrade to the latest version to get the best features, bug fixes, and security patches. If you are unable to upgrade at this time, paid support is available for older versions (hapi.im/commercial).'
+    dev: false
+    engines:
+      node: '>=4.0.0'
+    resolution:
+      integrity: sha512-Z5BTk6ZRe4tXXQlkqftmsAUANpXmuwlsF5Oov8ThoMbQRzdGTA1ngYRW160GexgOgjsFOKJz0LYhoNi+2AMBUw==
   /bytes/3.1.0:
     dev: false
     engines:
@@ -320,6 +330,13 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-nmT2T0lljbxdQZfspsno9hgrG3Uir6Ks5afism62poxqBM6sDnMEuPmzTq8XN0OEwqKLLdh1jQI3qyE66Nzb3w==
+  /hoek/4.2.1:
+    deprecated: 'This version has been deprecated in accordance with the hapi support policy (hapi.im/support). Please upgrade to the latest version to get the best features, bug fixes, and security patches. If you are unable to upgrade at this time, paid support is available for older versions (hapi.im/commercial).'
+    dev: false
+    engines:
+      node: '>=4.0.0'
+    resolution:
+      integrity: sha512-QLg82fGkfnJ/4iy1xZ81/9SIJiq1NGFUMGs6ParyjBZr6jW2Ufj/snDqTHixNlHdPNwN2RLVD0Pi3igeK9+JfA==
   /http-errors/1.7.2:
     dependencies:
       depd: 1.1.2
@@ -371,6 +388,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
+  /ip-to-location/1.0.1:
+    dependencies:
+      wreck: 12.5.1
+    dev: false
+    resolution:
+      integrity: sha1-9tRvvX3OHRyeRE74j1VK1u96wWI=
   /ipaddr.js/1.9.0:
     dev: false
     engines:
@@ -746,6 +769,16 @@ packages:
     dev: false
     resolution:
       integrity: sha1-DZvNsFpPhNBrm585kAKKYB6kofw=
+  /wreck/12.5.1:
+    dependencies:
+      boom: 5.2.0
+      hoek: 4.2.1
+    deprecated: 'This version has been deprecated in accordance with the hapi support policy (hapi.im/support). Please upgrade to the latest version to get the best features, bug fixes, and security patches. If you are unable to upgrade at this time, paid support is available for older versions (hapi.im/commercial).'
+    dev: false
+    engines:
+      node: '>=4.0.0'
+    resolution:
+      integrity: sha512-l5DUGrc+yDyIflpty1x9XuMj1ehVjC/dTbF3/BasOO77xk0EdEa4M/DuOY8W88MQDAD0fEDqyjc8bkIMHd2E9A==
   /xml2js/0.4.23:
     dependencies:
       sax: 1.2.4
@@ -768,5 +801,6 @@ specifiers:
   covidapi: ^0.4.3
   express: ^4.17.1
   fs: ^0.0.2
+  ip-to-location: ^1.0.1
   newsapi: ^2.4.1
   weather-js: ^2.0.0
