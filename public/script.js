@@ -1,20 +1,19 @@
 ///rt("Note if you did not get results refresh the page")
 
-$.getJSON("https://ipapi.co/json/", async function(data) {
-  let pa = await JSON.stringify(data);
-  
- await fetch("/", {
+$.get("https://www.cloudflare.com/cdn-cgi/trace", data => {
+  const ipInfo = data.split("\n", 3).slice(2);
+  let spli = {
+    ipdata:ipInfo
+  };
+  fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: pa
+    body: JSON.stringify(spli)
   });
 });
-
-            
-data();
-async function data() {
-  await fetch("/covid").then(async res => {
-    await res.json().then(va => {
+setTimeout(() => {
+  fetch("/covid").then(res => {
+    res.json().then(va => {
       document.getElementById("covid").innerHTML = `${va.country}`;
       document.getElementById(
         "csd"
@@ -43,7 +42,7 @@ async function data() {
       document.getElementById("country").src = va.countryInfo.flag;
     });
   });
-  await fetch("/weather").then(async res => {
+  fetch("/weather").then(async res => {
     await res.json().then(val => {
       document.getElementById("Weather").src = val.current.imageUrl;
       document.getElementById("WD").innerHTML =
@@ -63,13 +62,13 @@ async function data() {
       document.getElementById("cdata3").innerHTML =
         "Humidity |" + val.current.humidity + "%|";
       document.getElementById("cdata4").innerHTML =
-        "Precipitation |" + val.forecast[0].precip + " mm|";
+        "Precipitation |" + val.forecast[1].precip + " mm|";
       document.getElementById("cdata5").innerHTML =
         "WindDisplay |" + val.current.winddisplay + "|";
     });
   });
-  await fetch("/news").then(async res => {
-    await res.json().then(val => {
+  fetch("/news").then(res => {
+    res.json().then(val => {
       let data = val.articles;
 
       let i = 0;
@@ -83,12 +82,10 @@ async function data() {
       <hr style="width:100%;text-align:left;margin-left:0" />
 
 `;
-        let doc = document.createElement("div")
-        doc.innerHTML=settings
-        document.getElementById("list").appendChild(doc)
-        
+        let doc = document.createElement("div");
+        doc.innerHTML = settings;
+        document.getElementById("list").appendChild(doc);
       }
-      
     });
   });
-}
+}, 5000)

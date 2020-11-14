@@ -14,7 +14,8 @@
     "fs": "^0.0.2",
     "covidapi": "^0.4.3",
     "weather-js": "^2.0.0",
-    "newsapi": "^2.4.1"
+    "newsapi": "^2.4.1",
+    "ip-to-location":"^1.0.1"
   },
   "engines": {
     "node": "12.x"
